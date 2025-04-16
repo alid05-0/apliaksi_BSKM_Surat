@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>APK Surat BKSM SAKSI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #121212;
+      color: #d1c4e9;
+    }
+    header, footer {
+      background: linear-gradient(90deg, #7b3fe4 0%, #b76cf6 100%);
+      color: white;
+      box-shadow: 0 6px 20px rgba(183, 108, 246, 0.6);
+      border-radius: 0 0 2rem 2rem;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 2.5rem;
+      letter-spacing: 0.15em;
+      text-shadow: 0 2px 8px rgba(183, 108, 246, 0.8);
+    }
+    main {
+      max-width: 1000px;
+      margin: 4rem auto 6rem;
+      padding: 0 2rem;
+      background-color: #1e1e2f;
+      border-radius: 2.5rem;
+      box-shadow: 0 16px 40px rgba(183, 108, 246, 0.15);
+      transition: box-shadow 0.5s ease;
+    }
+    main:hover {
+      box-shadow: 0 20px 48px rgba(183, 108, 246, 0.25);
+    }
+    section {
+      background-color: #2a2a3d;
+      border-radius: 2rem;
+      box-shadow: 0 10px 30px rgba(183, 108, 246, 0.1);
+      padding: 2.5rem 4rem;
+      margin-bottom: 3.5rem;
+      transition: box-shadow 0.5s ease;
+    }
+    section:hover {
+      box-shadow: 0 14px 40px rgba(183, 108, 246, 0.2);
+    }
+    h2 {
+      font-weight: 900;
+      font-size: 2.25rem;
+      margin-bottom: 1.75rem;
+      color: #b76cf6;
+      text-shadow: 0 1px 6px rgba(183, 108, 246, 0.7);
+    }
+    h3 {
+      font-weight: 800;
+      font-size: 1.375rem;
+      margin-bottom: 1.5rem;
+      color: #d1c4e9;
+      text-shadow: 0 1px 4px rgba(209, 196, 233, 0.6);
+    }
+    label {
+      font-weight: 700;
+      color: #b76cf6;
+    }
+    input[type="text"],
+    input[type="date"],
+    textarea {
+      border: 2px solid #b76cf6;
+      border-radius: 1.25rem;
+      padding: 0.85rem 1.25rem;
+      font-size: 1.125rem;
+      background-color: #1e1e2f;
+      color: #d1c4e9;
+      transition: border-color 0.5s ease, box-shadow 0.5s ease;
+    }
+    input[type="text"]:focus,
+    input[type="date"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #7b3fe4;
+      box-shadow: 0 0 0 5px rgba(123, 63, 228, 0.3);
+    }
+    button {
+      font-weight: 900;
+      font-size: 1.375rem;
+      transition: background-color 0.5s ease, transform 0.4s ease;
+      border-radius: 2rem;
+      box-shadow: 0 8px 20px rgba(183, 108, 246, 0.4);
+    }
+    button.bg-blue-700 {
+      background-color: #b76cf6;
+    }
+    button.bg-blue-700:hover {
+      background-color: #7b3fe4;
+      transform: scale(1.1) translateY(-5px);
+    }
+    button.bg-gray-300 {
+      background-color: #e6dbff;
+      color: #7b3fe4;
+    }
+    button.bg-gray-300:hover {
+      background-color: #cbb7ff;
+      color: #5a2dbf;
+      transform: scale(1.1) translateY(-5px);
+    }
+    button.bg-green-700 {
+      background-color: #7b3fe4;
+    }
+    button.bg-green-700:hover {
+      background-color: #4e2aaf;
+      transform: scale(1.1) translateY(-5px);
+    }
+    table {
+      border-collapse: separate;
+      border-spacing: 0 1.25rem;
+      width: 100%;
+      border-radius: 2rem;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(183, 108, 246, 0.1);
+    }
+    thead tr {
+      background-color: #d9c0ff;
+      border-radius: 2rem;
+      box-shadow: 0 6px 20px rgba(183, 108, 246, 0.15);
+    }
+    thead th {
+      padding: 1.25rem 2rem;
+      text-align: left;
+      font-weight: 800;
+      color: #7b3fe4;
+      border-bottom: none;
+    }
+    tbody tr {
+      background-color: #2a2a3d;
+      border-radius: 2rem;
+      box-shadow: 0 6px 20px rgba(183, 108, 246, 0.05);
+      transition: box-shadow 0.5s ease;
+    }
+    tbody tr:hover {
+      box-shadow: 0 10px 30px rgba(183, 108, 246, 0.1);
+    }
+    tbody td {
+      padding: 1.25rem 2rem;
+      border-bottom: none;
+      color: #d1c4e9;
+      font-weight: 800;
+    }
+    footer {
+      font-size: 1.125rem;
+      padding: 2rem 0;
+      text-align: center;
+      color: white;
+      box-shadow: 0 -6px 20px rgba(183, 108, 246, 0.6);
+      border-radius: 2rem 2rem 0 0;
+    }
+  </style>
+  </head>
+<body class="bg-gradient-to-r from-indigo-50 via-white to-indigo-50 min-h-screen flex flex-col">
+<header class="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700 text-white p-6 shadow-lg rounded-b-xl flex items-center space-x-4">
+<img src="Logo BKSM (1).png" alt="Logo BKSM SAKSI" class="h-20 w-20 object-contain" />
+    <h1 class="text-4xl font-extrabold tracking-widest drop-shadow-lg">SURAT BKSM SAKSI</h1>
+  </header>
+
+  <main class="flex-grow container mx-auto p-8">
+    <div id="login-section" class="max-w-md mx-auto bg-white rounded-3xl p-8 shadow-lg">
+      <h2 class="text-3xl font-bold mb-6 text-center text-blue-800">Login</h2>
+      <form id="login-form" class="space-y-6">
+        <div>
+          <label for="username" class="block mb-2 font-semibold text-gray-800 text-lg">Username</label>
+          <input type="text" id="username" required placeholder="Enter username" class="w-full border border-gray-300 rounded-2xl px-6 py-4 text-lg placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-500 transition" />
+        </div>
+        <div>
+          <label for="password" class="block mb-2 font-semibold text-gray-800 text-lg">Password</label>
+          <input type="password" id="password" required placeholder="Enter password" class="w-full border border-gray-300 rounded-2xl px-6 py-4 text-lg placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-500 transition" />
+        </div>
+        <button type="submit" class="w-full bg-blue-700 text-white py-4 rounded-2xl shadow-lg hover:bg-blue-800 transition font-bold text-xl tracking-wide transform hover:-translate-y-1 hover:scale-105">Login</button>
+      </form>
+      <p id="login-error" class="text-red-600 mt-4 hidden text-center font-semibold"></p>
+      <p class="mt-4 text-center text-gray-600">Belum punya akun? <button id="show-register" class="text-blue-700 font-semibold hover:underline">Daftar di sini</button></p>
+    </div>
+
+    <div id="register-section" class="max-w-md mx-auto bg-white rounded-3xl p-8 shadow-lg hidden">
+      <h2 class="text-3xl font-bold mb-6 text-center text-blue-800">Daftar Akun</h2>
+      <form id="register-form" class="space-y-6">
+        <div>
+          <label for="reg-username" class="block mb-2 font-semibold text-gray-800 text-lg">Username</label>
+          <input type="text" id="reg-username" required placeholder="Enter username" class="w-full border border-gray-300 rounded-2xl px-6 py-4 text-lg placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-500 transition" />
+        </div>
+        <div>
+          <label for="reg-password" class="block mb-2 font-semibold text-gray-800 text-lg">Password</label>
+          <input type="password" id="reg-password" required placeholder="Enter password" class="w-full border border-gray-300 rounded-2xl px-6 py-4 text-lg placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-500 transition" />
+        </div>
+        <div>
+          <label for="reg-role" class="block mb-2 font-semibold text-gray-800 text-lg">Role</label>
+          <select id="reg-role" required class="w-full border border-gray-300 rounded-2xl px-6 py-4 text-lg focus:outline-none focus:ring-4 focus:ring-blue-500 transition">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full bg-green-700 text-white py-4 rounded-2xl shadow-lg hover:bg-green-800 transition font-bold text-xl tracking-wide transform hover:-translate-y-1 hover:scale-105">Daftar</button>
+      </form>
+      <p id="register-error" class="text-red-600 mt-4 hidden text-center font-semibold"></p>
+      <p class="mt-4 text-center text-gray-600">Sudah punya akun? <button id="show-login" class="text-blue-700 font-semibold hover:underline">Login di sini</button></p>
+    </div>
+
+    <nav id="nav-section" class="mb-10 flex space-x-8 justify-center hidden">
+      <button id="btn-incoming" class="px-8 py-4 bg-blue-700 text-white rounded-xl shadow-lg hover:bg-blue-800 transition transform hover:-translate-y-1 hover:scale-105">Surat Masuk</button>
+      <button id="btn-outgoing" class="px-8 py-4 bg-gray-300 text-gray-700 rounded-xl shadow-lg hover:bg-gray-400 transition transform hover:-translate-y-1 hover:scale-105">Surat Keluar</button>
+    </nav>
+
+    <section id="incoming-section" class="rounded-xl bg-white shadow-xl p-8 transition-shadow duration-300 hover:shadow-2xl hidden">
+      <h2 class="text-3xl font-bold mb-8 text-blue-800 border-b-4 border-blue-400 pb-3 drop-shadow-md">Surat Masuk</h2>
+      <form id="incoming-form" class="mb-10 space-y-6">
+        <div>
+          <label for="incoming-date" class="block mb-3 font-semibold text-gray-800 text-lg">Tanggal</label>
+          <input type="date" id="incoming-date" required class="w-full border border-gray-300 rounded-2xl px-6 py-4 text-lg focus:outline-none focus:ring-4 focus:ring-blue-500 transition" />
+        </div>
+        <div>
+          <label for="incoming-sender" class="block mb-3 font-semibold text-gray-800 text-lg">Pengirim</label>
+          <input type="text" id="incoming-sender" required placeholder="Nama pengirim" class="w-full border border-gray-300 rounded-2xl px-6 py-4 text-lg placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-500 transition" />
+        </div>
+        <div>
+          <label for="incoming-subject" class="block mb-3 font-semibold text-gray-800 text-lg">Perihal</label>
+          <input type="text" id="incoming-subject" required placeholder="Perihal surat" class="w-full border border-gray-300 rounded-2xl px-6 py-4 text-lg placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-500 transition" />
+        </div>
+        <div>
+          <label for="incoming-description" class="block mb-3 font-semibold text-gray-800 text-lg">Deskripsi</label>
+          <textarea id="incoming-description" rows="5" placeholder="Deskripsi tambahan" class="w-full border border-gray-300 rounded-2xl px-6 py-4 text-lg placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-500 transition"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-700 text-white py-4 rounded-2xl shadow-lg hover:bg-blue-800 transition font-bold text-xl tracking-wide transform hover:-translate-y-1 hover:scale-105">Tambah Surat Masuk</button>
+      </form>
+
+      <div>
+        <h3 class="text-2xl font-bold mb-6 text-blue-900 drop-shadow-md">Daftar Surat Masuk</h3>
+        <table id="incoming-list" class="min-w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
+          <thead>
+            <tr class="bg-blue-200 text-blue-900 uppercase text-base font-semibold tracking-wide">
+              <th class="py-4 px-8 text-left rounded-tl-2xl">Tanggal</th>
+              <th class="py-4 px-8 text-left">Pengirim</th>
+              <th class="py-4 px-8 text-left">Perihal</th>
+              <th class="py-4 px-8 text-left">Deskripsi</th>
+              <th class="py-4 px-8 text-center rounded-tr-2xl">Aksi</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-800 text-base font-medium"></tbody>
+        </table>
+        <button id="print-incoming" class="mt-8 w-full bg-green-700 text-white py-4 rounded-2xl shadow-lg hover:bg-green-800 transition font-bold text-xl tracking-wide transform hover:-translate-y-1 hover:scale-105">
+          <i class="fas fa-print mr-3"></i> Cetak Surat Masuk
+        </button>
+      </div>
+    </section>
+
+    <section id="outgoing-section" class="hidden rounded-xl bg-white shadow-xl p-8 transition-shadow duration-300 hover:shadow-2xl">
+      <h2 class="text-3xl font-bold mb-8 text-blue-800 border-b-4 border-blue-400 pb-3 drop-shadow-md">Surat Keluar</h2>
+      <form id="outgoing-form" class="mb-10 space-y-6">
+        <div>
+          <label for="outgoing-date" class="block mb-3 font-semibold text-gray-800 text-lg">Tanggal</label>
+          <input type="date" id="outgoing-date" required class="w-full border border-gray-300 rounded-2xl px-6 py-4 text-lg focus:outline-none focus:ring-4 focus:ring-blue-500 transition" />
+        </div>
+        <div>
+          <label for="outgoing-recipient" class="block mb-3 font-semibold text-gray-800 text-lg">Penerima</label>
+          <input type="text" id="outgoing-recipient" required placeholder="Nama penerima" class="w-full border border-gray-300 rounded-2xl px-6 py-4 text-lg placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-500 transition" />
+        </div>
+        <div>
+          <label for="outgoing-subject" class="block mb-3 font-semibold text-gray-800 text-lg">Perihal</label>
+          <input type="text" id="outgoing-subject" required placeholder="Perihal surat" class="w-full border border-gray-300 rounded-2xl px-6 py-4 text-lg placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-500 transition" />
+        </div>
+        <div>
+          <label for="outgoing-description" class="block mb-3 font-semibold text-gray-800 text-lg">Deskripsi</label>
+          <textarea id="outgoing-description" rows="5" placeholder="Deskripsi tambahan" class="w-full border border-gray-300 rounded-2xl px-6 py-4 text-lg placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-500 transition"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-700 text-white py-4 rounded-2xl shadow-lg hover:bg-blue-800 transition font-bold text-xl tracking-wide transform hover:-translate-y-1 hover:scale-105">Tambah Surat Keluar</button>
+      </form>
+
+      <div>
+        <h3 class="text-2xl font-bold mb-6 text-blue-900 drop-shadow-md">Daftar Surat Keluar</h3>
+        <table id="outgoing-list" class="min-w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
+          <thead>
+            <tr class="bg-blue-200 text-blue-900 uppercase text-base font-semibold tracking-wide">
+              <th class="py-4 px-8 text-left rounded-tl-2xl">Tanggal</th>
+              <th class="py-4 px-8 text-left">Penerima</th>
+              <th class="py-4 px-8 text-left">Perihal</th>
+              <th class="py-4 px-8 text-left">Deskripsi</th>
+              <th class="py-4 px-8 text-center rounded-tr-2xl">Aksi</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-800 text-base font-medium"></tbody>
+        </table>
+        <button id="print-outgoing" class="mt-8 w-full bg-green-700 text-white py-4 rounded-2xl shadow-lg hover:bg-green-800 transition font-bold text-xl tracking-wide transform hover:-translate-y-1 hover:scale-105">
+          <i class="fas fa-print mr-3"></i> Cetak Surat Keluar
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700 text-white text-center p-8 shadow-inner rounded-t-xl">
+    &copy; 2025 BKSM SAKSI
+  </footer>
+
+  <script>
+    // Utility functions for localStorage
+    function getData(key) {
+      const data = localStorage.getItem(key);
+      return data ? JSON.parse(data) : [];
+    }
+
+    function saveData(key, data) {
+      localStorage.setItem(key, JSON.stringify(data));
+    }
+
+    // Render list items
+    function renderList(listElement, items, type) {
+      const tbody = listElement.querySelector('tbody');
+      tbody.innerHTML = '';
+      items.forEach((item, index) => {
+        const tr = document.createElement('tr');
+        tr.className = 'border-b border-gray-200 hover:bg-gray-100';
+
+        const dateTd = document.createElement('td');
+        dateTd.className = 'py-3 px-6 text-left whitespace-nowrap';
+        dateTd.textContent = new Date(item.date).toLocaleDateString();
+
+        const senderOrRecipientTd = document.createElement('td');
+        senderOrRecipientTd.className = 'py-3 px-6 text-left';
+        senderOrRecipientTd.textContent = type === 'incoming' ? item.sender : item.recipient;
+
+        const subjectTd = document.createElement('td');
+        subjectTd.className = 'py-3 px-6 text-left';
+        subjectTd.textContent = item.subject;
+
+        const descriptionTd = document.createElement('td');
+        descriptionTd.className = 'py-3 px-6 text-left';
+        descriptionTd.textContent = item.description || '';
+
+        const actionsTd = document.createElement('td');
+        actionsTd.className = 'py-3 px-6 text-center';
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.className = 'text-red-600 hover:text-red-800 mr-2';
+        deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
+        deleteBtn.title = 'Hapus';
+        deleteBtn.onclick = () => {
+          if (confirm("Hapus surat ini?")) {
+            items.splice(index, 1);
+            saveData(type, items);
+            renderList(listElement, items, type);
+          }
+        };
+
+        // Edit button
+        const editBtn = document.createElement('button');
+        editBtn.className = 'text-yellow-600 hover:text-yellow-800 mr-2';
+        editBtn.innerHTML = '<i class="fas fa-edit"></i>';
+        editBtn.title = 'Edit';
+        editBtn.onclick = () => {
+          // Replace row cells with input fields for editing
+          const tr = editBtn.closest('tr');
+          tr.innerHTML = '';
+
+          // Date input
+          const dateInputTd = document.createElement('td');
+          dateInputTd.className = 'py-3 px-6 text-left whitespace-nowrap';
+          const dateInput = document.createElement('input');
+          dateInput.type = 'date';
+          dateInput.value = item.date;
+          dateInput.className = 'border border-gray-300 rounded px-2 py-1';
+          dateInputTd.appendChild(dateInput);
+          tr.appendChild(dateInputTd);
+
+          // Sender/Recipient input
+          const srInputTd = document.createElement('td');
+          srInputTd.className = 'py-3 px-6 text-left';
+          const srInput = document.createElement('input');
+          srInput.type = 'text';
+          srInput.value = type === 'incoming' ? item.sender : item.recipient;
+          srInput.className = 'border border-gray-300 rounded px-2 py-1 w-full';
+          srInputTd.appendChild(srInput);
+          tr.appendChild(srInputTd);
+
+          // Subject input
+          const subjectInputTd = document.createElement('td');
+          subjectInputTd.className = 'py-3 px-6 text-left';
+          const subjectInput = document.createElement('input');
+          subjectInput.type = 'text';
+          subjectInput.value = item.subject;
+          subjectInput.className = 'border border-gray-300 rounded px-2 py-1 w-full';
+          subjectInputTd.appendChild(subjectInput);
+          tr.appendChild(subjectInputTd);
+
+          // Description input
+          const descInputTd = document.createElement('td');
+          descInputTd.className = 'py-3 px-6 text-left';
+          const descInput = document.createElement('textarea');
+          descInput.value = item.description || '';
+          descInput.className = 'border border-gray-300 rounded px-2 py-1 w-full';
+          descInput.rows = 3;
+          descInputTd.appendChild(descInput);
+          tr.appendChild(descInputTd);
+
+          // Actions: Save and Cancel buttons
+          const actionsInputTd = document.createElement('td');
+          actionsInputTd.className = 'py-3 px-6 text-center';
+
+          const saveBtn = document.createElement('button');
+          saveBtn.className = 'text-green-600 hover:text-green-800 mr-2';
+          saveBtn.innerHTML = '<i class="fas fa-save"></i>';
+          saveBtn.title = 'Simpan';
+          saveBtn.onclick = () => {
+            // Save changes
+            item.date = dateInput.value;
+            if (type === 'incoming') {
+              item.sender = srInput.value.trim();
+            } else {
+              item.recipient = srInput.value.trim();
+            }
+            item.subject = subjectInput.value.trim();
+            item.description = descInput.value.trim();
+
+            saveData(type, items);
+            renderList(listElement, items, type);
+          };
+
+          const cancelBtn = document.createElement('button');
+          cancelBtn.className = 'text-gray-600 hover:text-gray-800';
+          cancelBtn.innerHTML = '<i class="fas fa-times"></i>';
+          cancelBtn.title = 'Batal';
+          cancelBtn.onclick = () => {
+            renderList(listElement, items, type);
+          };
+
+          actionsInputTd.appendChild(saveBtn);
+          actionsInputTd.appendChild(cancelBtn);
+          tr.appendChild(actionsInputTd);
+        };
+
+        actionsTd.appendChild(editBtn);
+        actionsTd.appendChild(deleteBtn);
+
+        tr.appendChild(dateTd);
+        tr.appendChild(senderOrRecipientTd);
+        tr.appendChild(subjectTd);
+        tr.appendChild(descriptionTd);
+        tr.appendChild(actionsTd);
+
+        tbody.appendChild(tr);
+      });
+    }
+
+    // Incoming letters
+    const incomingList = document.getElementById('incoming-list');
+    const incomingForm = document.getElementById('incoming-form');
+    let incomingLetters = getData('incoming');
+
+    incomingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const newLetter = {
+        date: document.getElementById('incoming-date').value,
+        sender: document.getElementById('incoming-sender').value.trim(),
+        subject: document.getElementById('incoming-subject').value.trim(),
+        description: document.getElementById('incoming-description').value.trim(),
+      };
+      incomingLetters.push(newLetter);
+      saveData('incoming', incomingLetters);
+      renderList(incomingList, incomingLetters, 'incoming');
+      incomingForm.reset();
+    });
+
+    renderList(incomingList, incomingLetters, 'incoming');
+
+    // Outgoing letters
+    const outgoingList = document.getElementById('outgoing-list');
+    const outgoingForm = document.getElementById('outgoing-form');
+    let outgoingLetters = getData('outgoing');
+
+    outgoingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const newLetter = {
+        date: document.getElementById('outgoing-date').value,
+        recipient: document.getElementById('outgoing-recipient').value.trim(),
+        subject: document.getElementById('outgoing-subject').value.trim(),
+        description: document.getElementById('outgoing-description').value.trim(),
+      };
+      outgoingLetters.push(newLetter);
+      saveData('outgoing', outgoingLetters);
+      renderList(outgoingList, outgoingLetters, 'outgoing');
+      outgoingForm.reset();
+    });
+
+    renderList(outgoingList, outgoingLetters, 'outgoing');
+
+    // Navigation buttons
+    const btnIncoming = document.getElementById('btn-incoming');
+    const btnOutgoing = document.getElementById('btn-outgoing');
+    const incomingSection = document.getElementById('incoming-section');
+    const outgoingSection = document.getElementById('outgoing-section');
+
+    btnIncoming.addEventListener('click', () => {
+      incomingSection.classList.remove('hidden');
+      outgoingSection.classList.add('hidden');
+      btnIncoming.classList.add('bg-blue-500', 'text-white');
+      btnIncoming.classList.remove('bg-gray-300', 'text-gray-700');
+      btnOutgoing.classList.remove('bg-blue-500', 'text-white');
+      btnOutgoing.classList.add('bg-gray-300', 'text-gray-700');
+    });
+
+    btnOutgoing.addEventListener('click', () => {
+      outgoingSection.classList.remove('hidden');
+      incomingSection.classList.add('hidden');
+      btnOutgoing.classList.add('bg-blue-500', 'text-white');
+      btnOutgoing.classList.remove('bg-gray-300', 'text-gray-700');
+      btnIncoming.classList.remove('bg-blue-500', 'text-white');
+      btnIncoming.classList.add('bg-gray-300', 'text-gray-700');
+    });
+  </script>
+
+  <script>
+    // Print functions
+    document.getElementById('print-incoming').addEventListener('click', () => {
+      const table = document.getElementById('incoming-list').cloneNode(true);
+      // Remove the last column (Aksi) from the table header
+      table.querySelectorAll('thead th:last-child, tbody td:last-child').forEach(el => el.remove());
+      const printWindow = window.open('', '', 'width=800,height=600');
+      printWindow.document.write('<html><head><title>Cetak Surat Masuk</title>');
+      printWindow.document.write('<link href="https://cdn.tailwindcss.com" rel="stylesheet">');
+      printWindow.document.write('<style>body{font-family: Arial, sans-serif; padding: 20px;} table{width: 100%; border-collapse: collapse;} th, td{border: 1px solid #ccc; padding: 8px; text-align: left;} th{background-color: #f3f4f6;}</style>');
+      printWindow.document.write('</head><body>');
+      printWindow.document.write('<h1>Daftar Surat Masuk</h1>');
+      printWindow.document.write(table.outerHTML);
+      printWindow.document.write('</body></html>');
+      printWindow.document.close();
+      printWindow.document.close();
+      printWindow.focus();
+      printWindow.print();
+      printWindow.close();
+    });
+
+    document.getElementById('print-outgoing').addEventListener('click', () => {
+      const table = document.getElementById('outgoing-list').cloneNode(true);
+      // Remove the last column (Aksi) from the table header
+      table.querySelectorAll('thead th:last-child, tbody td:last-child').forEach(el => el.remove());
+      const printWindow = window.open('', '', 'width=800,height=600');
+      printWindow.document.write('<html><head><title>Cetak Surat Keluar</title>');
+      printWindow.document.write('<link href="https://cdn.tailwindcss.com" rel="stylesheet">');
+      printWindow.document.write('<style>body{font-family: Arial, sans-serif; padding: 20px;} table{width: 100%; border-collapse: collapse;} th, td{border: 1px solid #ccc; padding: 8px; text-align: left;} th{background-color: #f3f4f6;}</style>');
+      printWindow.document.write('</head><body>');
+      printWindow.document.write('<h1>Daftar Surat Keluar</h1>');
+      printWindow.document.write(table.outerHTML);
+      printWindow.document.write('</body></html>');
+      printWindow.document.close();
+      printWindow.focus();
+      printWindow.print();
+      printWindow.close();
+    });
+  </script>
+
+  <script>
+    // Simple login and access control
+    (function() {
+      const loginForm = document.getElementById('login-form');
+      const loginSection = document.getElementById('login-section');
+      const navSection = document.getElementById('nav-section');
+      const incomingSection = document.getElementById('incoming-section');
+      const outgoingSection = document.getElementById('outgoing-section');
+      const incomingForm = document.getElementById('incoming-form');
+      const outgoingForm = document.getElementById('outgoing-form');
+      const loginError = document.getElementById('login-error');
+
+      // Hardcoded users for demo
+      const users = {
+        admin: { password: 'admin123', role: 'admin' },
+        user: { password: 'user123', role: 'user' }
+      };
+
+      function setAccessByRole(role) {
+        if (role === 'admin') {
+          // Admin: show all features
+          incomingForm.style.display = 'block';
+          outgoingForm.style.display = 'block';
+          // Show edit and delete buttons by re-rendering lists
+          renderList(incomingList, incomingLetters, 'incoming');
+          renderList(outgoingList, outgoingLetters, 'outgoing');
+        } else if (role === 'user') {
+          // User: hide add forms and disable edit/delete buttons
+          incomingForm.style.display = 'none';
+          outgoingForm.style.display = 'none';
+
+          // Override renderList to disable edit/delete buttons
+          function renderListUser(listElement, items, type) {
+            const tbody = listElement.querySelector('tbody');
+            tbody.innerHTML = '';
+            items.forEach((item, index) => {
+              const tr = document.createElement('tr');
+              tr.className = 'border-b border-gray-200 hover:bg-gray-100';
+
+              const dateTd = document.createElement('td');
+              dateTd.className = 'py-3 px-6 text-left whitespace-nowrap';
+              dateTd.textContent = new Date(item.date).toLocaleDateString();
+
+              const senderOrRecipientTd = document.createElement('td');
+              senderOrRecipientTd.className = 'py-3 px-6 text-left';
+              senderOrRecipientTd.textContent = type === 'incoming' ? item.sender : item.recipient;
+
+              const subjectTd = document.createElement('td');
+              subjectTd.className = 'py-3 px-6 text-left';
+              subjectTd.textContent = item.subject;
+
+              const descriptionTd = document.createElement('td');
+              descriptionTd.className = 'py-3 px-6 text-left';
+              descriptionTd.textContent = item.description || '';
+
+              const actionsTd = document.createElement('td');
+              actionsTd.className = 'py-3 px-6 text-center';
+              actionsTd.textContent = '-';
+
+              tr.appendChild(dateTd);
+              tr.appendChild(senderOrRecipientTd);
+              tr.appendChild(subjectTd);
+              tr.appendChild(descriptionTd);
+              tr.appendChild(actionsTd);
+
+              tbody.appendChild(tr);
+            });
+          }
+          renderListUser(incomingList, incomingLetters, 'incoming');
+          renderListUser(outgoingList, outgoingLetters, 'outgoing');
+        }
+      }
+
+      loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value;
+
+        if (users[username] && users[username].password === password) {
+          loginError.classList.add('hidden');
+          loginSection.style.display = 'none';
+          navSection.classList.remove('hidden');
+          incomingSection.classList.remove('hidden');
+          setAccessByRole(users[username].role);
+        } else {
+          loginError.textContent = 'Username atau password salah.';
+          loginError.classList.remove('hidden');
+        }
+      });
+    })();
+  </script>
+
+  <script>
+    (function() {
+      const loginSection = document.getElementById('login-section');
+      const registerSection = document.getElementById('register-section');
+      const loginForm = document.getElementById('login-form');
+      const registerForm = document.getElementById('register-form');
+      const loginError = document.getElementById('login-error');
+      const registerError = document.getElementById('register-error');
+      const navSection = document.getElementById('nav-section');
+      const incomingSection = document.getElementById('incoming-section');
+      const outgoingSection = document.getElementById('outgoing-section');
+      const incomingForm = document.getElementById('incoming-form');
+      const outgoingForm = document.getElementById('outgoing-form');
+
+      // Hardcoded users for demo
+      const defaultUsers = {
+        admin: { password: 'admin123', role: 'admin' },
+        user: { password: 'user123', role: 'user' }
+      };
+
+      // Get users from localStorage or initialize with default users
+      function getUsers() {
+        const stored = localStorage.getItem('users');
+        if (stored) {
+          return JSON.parse(stored);
+        } else {
+          localStorage.setItem('users', JSON.stringify(defaultUsers));
+          return defaultUsers;
+        }
+      }
+
+      // Save users to localStorage
+      function saveUsers(users) {
+        localStorage.setItem('users', JSON.stringify(users));
+      }
+
+      // Show register form
+      document.getElementById('show-register').addEventListener('click', () => {
+        loginSection.style.display = 'none';
+        registerSection.style.display = 'block';
+        loginError.classList.add('hidden');
+        registerError.classList.add('hidden');
+      });
+
+      // Show login form
+      document.getElementById('show-login').addEventListener('click', () => {
+        registerSection.style.display = 'none';
+        loginSection.style.display = 'block';
+        loginError.classList.add('hidden');
+        registerError.classList.add('hidden');
+      });
+
+      // Registration form submit
+      registerForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const username = document.getElementById('reg-username').value.trim();
+        const password = document.getElementById('reg-password').value;
+        const role = document.getElementById('reg-role').value;
+
+        if (!username || !password || !role) {
+          registerError.textContent = 'Semua field harus diisi.';
+          registerError.classList.remove('hidden');
+          return;
+        }
+
+        const users = getUsers();
+        if (users[username]) {
+          registerError.textContent = 'Username sudah terdaftar.';
+          registerError.classList.remove('hidden');
+          return;
+        }
+
+        users[username] = { password, role };
+        saveUsers(users);
+
+        registerError.classList.add('hidden');
+        alert('Pendaftaran berhasil! Silakan login.');
+        registerSection.style.display = 'none';
+        loginSection.style.display = 'block';
+        registerForm.reset();
+      });
+
+      // Login form submit
+      loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value;
+
+        const users = getUsers();
+        if (users[username] && users[username].password === password) {
+          loginError.classList.add('hidden');
+          loginSection.style.display = 'none';
+          navSection.classList.remove('hidden');
+          incomingSection.classList.remove('hidden');
+          setAccessByRole(users[username].role);
+        } else {
+          loginError.textContent = 'Username atau password salah.';
+          loginError.classList.remove('hidden');
+        }
+      });
+
+      function setAccessByRole(role) {
+        if (role === 'admin') {
+          incomingForm.style.display = 'block';
+          outgoingForm.style.display = 'block';
+          renderList(incomingList, incomingLetters, 'incoming');
+          renderList(outgoingList, outgoingLetters, 'outgoing');
+        } else if (role === 'user') {
+          incomingForm.style.display = 'none';
+          outgoingForm.style.display = 'none';
+
+          function renderListUser(listElement, items, type) {
+            const tbody = listElement.querySelector('tbody');
+            tbody.innerHTML = '';
+            items.forEach((item) => {
+              const tr = document.createElement('tr');
+              tr.className = 'border-b border-gray-200 hover:bg-gray-100';
+
+              const dateTd = document.createElement('td');
+              dateTd.className = 'py-3 px-6 text-left whitespace-nowrap';
+              dateTd.textContent = new Date(item.date).toLocaleDateString();
+
+              const senderOrRecipientTd = document.createElement('td');
+              senderOrRecipientTd.className = 'py-3 px-6 text-left';
+              senderOrRecipientTd.textContent = type === 'incoming' ? item.sender : item.recipient;
+
+              const subjectTd = document.createElement('td');
+              subjectTd.className = 'py-3 px-6 text-left';
+              subjectTd.textContent = item.subject;
+
+              const descriptionTd = document.createElement('td');
+              descriptionTd.className = 'py-3 px-6 text-left';
+              descriptionTd.textContent = item.description || '';
+
+              const actionsTd = document.createElement('td');
+              actionsTd.className = 'py-3 px-6 text-center';
+              actionsTd.textContent = '-';
+
+              tr.appendChild(dateTd);
+              tr.appendChild(senderOrRecipientTd);
+              tr.appendChild(subjectTd);
+              tr.appendChild(descriptionTd);
+              tr.appendChild(actionsTd);
+
+              tbody.appendChild(tr);
+            });
+          }
+          renderListUser(incomingList, incomingLetters, 'incoming');
+          renderListUser(outgoingList, outgoingLetters, 'outgoing');
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
